@@ -1,0 +1,86 @@
+
+:root {
+    --thin--white-border:0.5pt solid white;
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f6f5f5;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.header{
+    background-color: #00334e;
+    padding: 2rem;
+    color: #f6f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) ;
+}
+
+.controls{
+    background-color: #ee6f57;
+    padding: 1rem;
+}
+.add:hover{
+    cursor: pointer;
+    color: #ee6f57;
+}
+.notes-container{
+    padding: 2rem;
+    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.note{
+    margin:1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 250px;
+    width: 250px;
+    background-color: #145374;
+    color: white;
+    padding: 2rem;
+    resize: both;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.note-heading, .note-body, .note-heading::placeholder{
+    background-color: inherit;
+    border: none;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    outline: none;
+}
+.note-heading{
+    font-weight: 900;
+    font-size: 1.2rem;
+    border-bottom: var(--thin--white-border);
+
+}
+.note-body{
+    padding: 1rem 0;
+    flex-grow: 1;
+    font-size: 1rem;
+}
+.note-controls{
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+    border-top: var(--thin--white-border);
+   
+}
